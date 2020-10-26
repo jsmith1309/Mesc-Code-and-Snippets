@@ -25,7 +25,7 @@ while (play == 'Y' or play == 'y'):
 
 	print('Q. What is the capital of %s?\n' % (countries[questionNum]))
 	for i in range(4):
-			print(' %s. %s\n' % ('ABCD'[i], answerOptions[i]))
+		print(' %s. %s\n' % ('ABCD'[i], answerOptions[i]))
 	print('\n')
 
 	getAnswer = input("Enter answer: (Q to quit) ").title()
@@ -43,4 +43,5 @@ while (play == 'Y' or play == 'y'):
 	quizNum += 1
 
 print('\n', ('*' * 80),'\n\n')
-print("You answered %s questions and you scored: %s points" % (quizNum, gotCorrect))
+print("You answered %s out of %s questions correctly." % (gotCorrect, quizNum))
+print(f"Your score: {gotCorrect*100/quizNum}%")
